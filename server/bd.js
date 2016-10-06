@@ -1,5 +1,5 @@
-var mysql = require('mysql')
-var BASE_DATOS_DEFECTO = 'test';
+var mysql = require('mysql');
+var BASE_DATOS_DEFECTO = 'usuarios';
 var HOST_DEFECTO = 'localhost';
 var USUARIO_DEFECTO = 'root';
 var PASSWORD_DEFECTO = 'test';
@@ -55,9 +55,14 @@ var reiniciarConexion = function() {
     }
 };
 
+var dameConexion = function() {
+    return conexion;
+};
+
 module.exports = {
     creaConexion: crearConexion,
     conecta: abrirConexion,
     desconecta: cerrarConexion,
-    reinicia: reiniciarConexion
+    reinicia: reiniciarConexion,
+    conexion: dameConexion
 };

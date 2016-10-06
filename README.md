@@ -10,6 +10,8 @@ npm init -y
 ```
 npm install --save express
 npm install --save mysql
+npm install --save body-parser //Parseador de JSON
+npm install --save method-override //Implementar y modificar métodos http
 ```
 ## Cómo conectar con nuestra base de datos
 
